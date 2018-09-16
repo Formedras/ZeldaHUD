@@ -1,11 +1,13 @@
-Hud for Zelda A Link to the past Randomizer
+# ZeldaHUD
+## Item Tracker for *The Legend of Zelda: A Link to the Past*
 
-Current Version : 1.0 
-
-Download Link : [Download](https://zarby89.github.io/ZeldaHud/HudZelda.rar) 
+[Download on Github](https://github.com/Formedras/ZeldaHUD/releases)
 
 
 ### Authors and Contributors
-Zarby89 , Thanks to Dessyreqt and Karkat for creating Randomizer for Zelda A Link to the past
-
-
+#### Original Application Author
+Zarby89
+#### Special Thanks
+Dessyreqt and Karkat for creating ALttPR for *The Legend of Zelda: A Link to the Past*<br/>
+[Nintendo Co., Ltd.](https://www.nintendo.co.jp) for creating *Zelda no Densetsu: Kamigami no Triforce*<br>
+[Nintendo of America](https://www.nintendo.com) for translating and releasing the aformentioned game in English in the United States of America<br/>
