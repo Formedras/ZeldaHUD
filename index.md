@@ -2,7 +2,7 @@
 ## Item Tracker for *The Legend of Zelda: A Link to the Past*
 
 [Download on GitHub](https://github.com/Formedras/ZeldaHUD/releases)
-[GitHub Project](https://github.com/Formedras/ZeldaHUD
+[GitHub Project](https://github.com/Formedras/ZeldaHUD)
 
 
 ### Authors and Contributors
