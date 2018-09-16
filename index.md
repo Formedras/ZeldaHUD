@@ -1,7 +1,7 @@
 # ZeldaHUD
 ## Item Tracker for *The Legend of Zelda: A Link to the Past*
 
-[Download on GitHub](https://github.com/Formedras/ZeldaHUD/releases)
+[Download on GitHub](https://github.com/Formedras/ZeldaHUD/releases)<br/>
 [GitHub Project](https://github.com/Formedras/ZeldaHUD)
 
 
