@@ -16,7 +16,7 @@ namespace zeldaGui
         public bool bottle = false;
         public bool count = false;
         public byte counter = 0;
-        public CustomItem(byte[] iconsId, string name, bool loop = false,bool bottle = false,bool count = false)
+        public CustomItem(byte[] iconsId, string name, bool loop = false, bool bottle = false, bool count = false)
         {
             this.iconsId = iconsId;
             this.level = 0;

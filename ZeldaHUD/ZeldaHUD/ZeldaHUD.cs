@@ -13,44 +13,44 @@ using System.Windows.Forms;
 
 namespace zeldaGui
 {
-	public partial class Form1 : Form
+	public partial class ZeldaHUD : Form
 	{
-		public Form1()
+		public ZeldaHUD()
 		{
 			InitializeComponent();
 
 		}
-		string currentIconset = @"IconsSets\Defaults";
-		string currentBgr = @"None";
-		Bitmap bgr;
+		string currentIconSet = @"IconSets\Defaults";
+		string currentBG = @"None";
+		Bitmap backgroundimage;
 		List<string> item_found = new List<string>();
-		private void Form1_Load(object sender, EventArgs e)
+		private void ZeldaHUD_Load(object sender, EventArgs e)
 		{
-			globalTimer.MakeTransparent(Color.Fuchsia);
-			globalCount.MakeTransparent(Color.Fuchsia);
+			TimerImage.MakeTransparent(Color.Fuchsia);
+			CountImage.MakeTransparent(Color.Fuchsia);
 			Text = "Right Click Here";
 			pictureBox1.Image = new Bitmap(pictureBox1.Width, pictureBox1.Height);
 			g = Graphics.FromImage(pictureBox1.Image);
 
-			addItems();
-			setDefaultItems();
+			AddItems();
+			SetDefaultItems();
 
 			loadLayout();
-			loadIconsSet(currentIconset);
-			if (currentBgr != "None")
+			LoadIconsSet(currentIconSet);
+			if (currentBG != "None")
 			{
-				bgr = new Bitmap(currentBgr);
-				bgr.MakeTransparent(Color.Fuchsia);
+				backgroundimage = new Bitmap(currentBG);
+				backgroundimage.MakeTransparent(Color.Fuchsia);
 			}
-			drawIcons();
+			DrawIcons();
 			//if (checkUpdate)
 			//{
 			//    if (Version.CheckUpdate() == true)
 			//    {
-			//        var window = MessageBox.Show("There is a new version avaiable do you want to download the update?", "Update Avaible", MessageBoxButtons.YesNo);
+			//        var window = MessageBox.Show("There is a new version available do you want to download the update?", "Update Available", MessageBoxButtons.YesNo);
 			//        if (window == DialogResult.Yes)
 			//        {
-			//            Help.ShowHelp(null, @"https://zarby89.github.io/ZeldaHud/");
+			//            Help.ShowHelp(null, @"https://github.com/Formedras/ZeldaHUD/releases");
 			//        }
 			//    }
 			//}
@@ -58,10 +58,10 @@ namespace zeldaGui
 		}
 		int nbrIcons = 74;
 		public static Bitmap[] iconSet;
-		public Bitmap globalTimer = new Bitmap("IconsSets\\Global\\timer.png");
-		public Bitmap globalCount = new Bitmap("IconsSets\\Global\\count.png");
+		public Bitmap TimerImage = new Bitmap("IconSets\\Default\\timer.png");
+		public Bitmap CountImage = new Bitmap("IconSets\\Default\\count.png");
 
-		public void loadIconsSet(string data)
+		public void LoadIconsSet(string data)
 		{
 			nbrIcons = Directory.GetFiles(data).Length;
 
@@ -74,15 +74,15 @@ namespace zeldaGui
 					iconSet[i].MakeTransparent(Color.Fuchsia);
 				}
 			}
-			if (currentBgr != "None")
+			if (currentBG != "None")
 			{
-				bgr = new Bitmap(currentBgr);
-				bgr.MakeTransparent(Color.Fuchsia);
+				backgroundimage = new Bitmap(currentBG);
+				backgroundimage.MakeTransparent(Color.Fuchsia);
 			}
-			currentIconset = data;
+			currentIconSet = data;
 		}
 
-		public void drawIcons()
+		public void DrawIcons()
 		{
 			pictureBox1.Image = new Bitmap(pictureBox1.Width, pictureBox1.Height);
 			g = Graphics.FromImage(pictureBox1.Image);
@@ -108,117 +108,87 @@ namespace zeldaGui
 				{
 					if (itemsArray[x, y] != null)
 					{
-						try
+						if ((currentBG != "None") && (backgroundimage != null) && (itemsArray[x, y].name != "Timer"))
 						{
-							if (currentBgr != "None")
+							g.DrawImage(backgroundimage, new Rectangle(x * 32, y * 32, 32, 32), 0, 0, 32, 32, GraphicsUnit.Pixel);
+						}
+						if (itemsArray[x, y].name != "Timer")
+						{
+							if (itemsArray[x, y].on)
 							{
-								if (bgr != null)
+								g.DrawImage(iconSet[itemsArray[x, y].iconsId[itemsArray[x, y].level]], new Rectangle(x * 32, y * 32, 32, 32), 0, 0, 32, 32, GraphicsUnit.Pixel);
+								if (itemsArray[x, y].count == true)
 								{
-									if (itemsArray[x, y].name != "Timer")
+									if (itemsArray[x, y].counter >= 1)
 									{
-										g.DrawImage(bgr, new Rectangle(x * 32, y * 32, 32, 32), 0, 0, 32, 32, GraphicsUnit.Pixel);
+										DrawCounter(g, x * 32, y * 32, itemsArray[x, y].counter);
 									}
-								}
-							}
-							if (itemsArray[x, y].name != "Timer")
-							{
-								if (itemsArray[x, y].on == true)
-								{
-
-									g.DrawImage(iconSet[itemsArray[x, y].iconsId[itemsArray[x, y].level]], new Rectangle(x * 32, y * 32, 32, 32), 0, 0, 32, 32, GraphicsUnit.Pixel);
-									if (itemsArray[x, y].count == true)
-									{
-										if (itemsArray[x, y].counter >= 1)
-										{
-											drawCounter(g, x * 32, y * 32, itemsArray[x, y].counter);
-										}
-									}
-								}
-								else
-								{
-									g.DrawImage(iconSet[itemsArray[x, y].iconsId[itemsArray[x, y].level]], new Rectangle(x * 32, y * 32, 32, 32), 0, 0, 32, 32, GraphicsUnit.Pixel, ia);
 								}
 							}
 							else
 							{
-								if (timer)
-								{
-
-								}
-								else
-								{
-									g.DrawImage(iconSet[itemsArray[x, y].iconsId[itemsArray[x, y].level]], new Rectangle(x * 32, y * 32, 32, 32), 0, 0, 32, 32, GraphicsUnit.Pixel, ia);
-								}
+								g.DrawImage(iconSet[itemsArray[x, y].iconsId[itemsArray[x, y].level]], new Rectangle(x * 32, y * 32, 32, 32), 0, 0, 32, 32, GraphicsUnit.Pixel, ia);
 							}
 						}
-						catch (Exception e)
+						else if (!timer)
 						{
-
+							g.DrawImage(iconSet[itemsArray[x, y].iconsId[itemsArray[x, y].level]], new Rectangle(x * 32, y * 32, 32, 32), 0, 0, 32, 32, GraphicsUnit.Pixel, ia);
 						}
 					}
 				}
 			}
 			if (timer)
 			{
-				TimeSpan objt = DateTime.Now.Subtract(timestarted);
-				if (timerend == false)
-				{
-					objt = DateTime.Now.Subtract(timestarted);
-				}
-				else
-				{
-
-					objt = timeended.Subtract(timestarted);
-				}
+				TimeSpan objt = timerend ? timeended.Subtract(timestarted) : DateTime.Now.Subtract(timestarted);
 
 				//g.DrawString(objt.Hours.ToString("D2") + ":" + objt.Minutes.ToString("D2") + ":" + objt.Seconds.ToString("D2"), label1.Font, Brushes.White, new Point(timerpospixel.X - 2, timerpospixel.Y + 4));
-				drawTime(g, objt);
+				DrawTime(g, objt);
 			}
 
 			pictureBox1.Refresh();
 		}
 
-		public void drawCounter(Graphics g, int x, int y, byte count)
+		public void DrawCounter(Graphics g, int x, int y, byte count)
 		{
 			string s = count.ToString("D2");
 			if (count <= 9)
 			{
-				g.DrawImage(globalCount, new Rectangle(x + 22, y + 18, 10, 14), count * 10, 0, 10, 14, GraphicsUnit.Pixel);
+				g.DrawImage(CountImage, new Rectangle(x + 22, y + 18, 10, 14), count * 10, 0, 10, 14, GraphicsUnit.Pixel);
 			}
 			else
 			{
 				int b = (s[0] - 48);
-				g.DrawImage(globalCount, new Rectangle(x + 12, y + 18, 10, 14), b * 10, 0, 10, 14, GraphicsUnit.Pixel);
+				g.DrawImage(CountImage, new Rectangle(x + 12, y + 18, 10, 14), b * 10, 0, 10, 14, GraphicsUnit.Pixel);
 				b = (s[1] - 48);
-				g.DrawImage(globalCount, new Rectangle(x + 22, y + 18, 10, 14), b * 10, 0, 10, 14, GraphicsUnit.Pixel);
+				g.DrawImage(CountImage, new Rectangle(x + 22, y + 18, 10, 14), b * 10, 0, 10, 14, GraphicsUnit.Pixel);
 			}
 
 
-			g.DrawImage(globalCount, new Rectangle((x * 32) + 22, (y * 32) + 18, 10, 14), 0, 0, 32, 32, GraphicsUnit.Pixel);
+			g.DrawImage(CountImage, new Rectangle((x * 32) + 22, (y * 32) + 18, 10, 14), 0, 0, 32, 32, GraphicsUnit.Pixel);
 		}
 
-		public void drawTime(Graphics g, TimeSpan time)
+		public void DrawTime(Graphics graphics, TimeSpan timeSpan)
 		{
 
-			string s = time.Hours.ToString("D2");
+			string s = timeSpan.Hours.ToString("D2");
 			int b = (s[0] - 48);
-			g.DrawImage(globalTimer, timerpospixel.X + 1, timerpospixel.Y + 4, new Rectangle(12 * b, 0, 12, 26), GraphicsUnit.Pixel);//hour1
+			graphics.DrawImage(TimerImage, timerpospixel.X + 1, timerpospixel.Y + 4, new Rectangle(12 * b, 0, 12, 26), GraphicsUnit.Pixel);//hour1
 			b = (s[1] - 48);
-			g.DrawImage(globalTimer, (timerpospixel.X + 1) + 13, timerpospixel.Y + 4, new Rectangle(12 * b, 0, 12, 26), GraphicsUnit.Pixel);//hour2
+			graphics.DrawImage(TimerImage, (timerpospixel.X + 1) + 13, timerpospixel.Y + 4, new Rectangle(12 * b, 0, 12, 26), GraphicsUnit.Pixel);//hour2
 
-			g.DrawImage(globalTimer, (timerpospixel.X + 1) + 26, timerpospixel.Y + 4, new Rectangle(120, 0, 8, 26), GraphicsUnit.Pixel);//:
-			s = time.Minutes.ToString("D2");
+			graphics.DrawImage(TimerImage, (timerpospixel.X + 1) + 26, timerpospixel.Y + 4, new Rectangle(120, 0, 8, 26), GraphicsUnit.Pixel);//:
+			s = timeSpan.Minutes.ToString("D2");
 			b = (s[0] - 48);
-			g.DrawImage(globalTimer, (timerpospixel.X + 1) + 35, timerpospixel.Y + 4, new Rectangle(12 * b, 0, 12, 26), GraphicsUnit.Pixel);//minute1
+			graphics.DrawImage(TimerImage, (timerpospixel.X + 1) + 35, timerpospixel.Y + 4, new Rectangle(12 * b, 0, 12, 26), GraphicsUnit.Pixel);//minute1
 			b = (s[1] - 48);
-			g.DrawImage(globalTimer, (timerpospixel.X + 1) + 48, timerpospixel.Y + 4, new Rectangle(12 * b, 0, 12, 26), GraphicsUnit.Pixel);//minute2
+			graphics.DrawImage(TimerImage, (timerpospixel.X + 1) + 48, timerpospixel.Y + 4, new Rectangle(12 * b, 0, 12, 26), GraphicsUnit.Pixel);//minute2
 
-			g.DrawImage(globalTimer, (timerpospixel.X + 1) + 61, timerpospixel.Y + 4, new Rectangle(120, 0, 8, 26), GraphicsUnit.Pixel);//:
-			s = time.Seconds.ToString("D2");
+			graphics.DrawImage(TimerImage, (timerpospixel.X + 1) + 61, timerpospixel.Y + 4, new Rectangle(120, 0, 8, 26), GraphicsUnit.Pixel);//:
+			s = timeSpan.Seconds.ToString("D2");
 			b = (s[0] - 48);
-			g.DrawImage(globalTimer, (timerpospixel.X + 1) + 69, timerpospixel.Y + 4, new Rectangle(12 * b, 0, 12, 26), GraphicsUnit.Pixel);//minute1
+			graphics.DrawImage(TimerImage, (timerpospixel.X + 1) + 69, timerpospixel.Y + 4, new Rectangle(12 * b, 0, 12, 26), GraphicsUnit.Pixel);//second1
 			b = (s[1] - 48);
-			g.DrawImage(globalTimer, (timerpospixel.X + 1) + 82, timerpospixel.Y + 4, new Rectangle(12 * b, 0, 12, 26), GraphicsUnit.Pixel);//minute2
+			graphics.DrawImage(TimerImage, (timerpospixel.X + 1) + 82, timerpospixel.Y + 4, new Rectangle(12 * b, 0, 12, 26), GraphicsUnit.Pixel);//second2
 
 		}
 
@@ -245,65 +215,8 @@ namespace zeldaGui
 		public static CustomItem[,] itemsArray = new CustomItem[24, 24];
 		public static Color clearColor = Color.FromArgb(10, 10, 15);
 
-		public void addItems()
+		public void AddItems()
 		{
-			/* itemsList.Add(new CustomItem(new byte[] { 0, 48, 49, 49 }, "Bow"));//Bow 0
-             itemsList.Add(new CustomItem(new byte[] { 1 }, "Blue Boomerang"));//Blue Boomerang 1
-             itemsList.Add(new CustomItem(new byte[] { 2 }, "HookShot"));//Hookshot 2
-             itemsList.Add(new CustomItem(new byte[] { 3 }, "Bombs"));//Bombs 3
-             itemsList.Add(new CustomItem(new byte[] { 4, 56 }, "Mushroom"));//Mushroom 4
-             itemsList.Add(new CustomItem(new byte[] { 5 }, "Fire Rod"));//Fire Rod 5
-             itemsList.Add(new CustomItem(new byte[] { 6 }, "Ice Rod"));//Ice Rod 6
-             itemsList.Add(new CustomItem(new byte[] { 7 }, "Bombos"));//Bombos 7
-             itemsList.Add(new CustomItem(new byte[] { 8 }, "Ether"));//Ether 8 
-             itemsList.Add(new CustomItem(new byte[] { 9 }, "Quake"));//Quake 9
-             itemsList.Add(new CustomItem(new byte[] { 10 }, "Lamp"));//Lamp 10
-             itemsList.Add(new CustomItem(new byte[] { 11 }, "Hammer"));//Hammer  11
-             itemsList.Add(new CustomItem(new byte[] { 12, 57 }, "Shovel"));//Shovel 12
-             itemsList.Add(new CustomItem(new byte[] { 13 }, "Net"));//Net 13 
-             itemsList.Add(new CustomItem(new byte[] { 14 }, "Book"));//Book 14
-             itemsList.Add(new CustomItem(new byte[] { 15 }, "Cane Somaria"));//Cane Somaria 15
-             itemsList.Add(new CustomItem(new byte[] { 16 }, "Cane of Byrna"));//Cane Byrna 16
-             itemsList.Add(new CustomItem(new byte[] { 17 }, "Cape"));//Cape 17
-             itemsList.Add(new CustomItem(new byte[] { 18, 18 }, "Mirror"));//Mirror 18
-             itemsList.Add(new CustomItem(new byte[] { 19, 43 }, "Power Glove"));//Power Glove 19
-             itemsList.Add(new CustomItem(new byte[] { 20 }, "Boots"));//Boots 20
-             itemsList.Add(new CustomItem(new byte[] { 21 }, "Flippers"));//Flippers 21
-             itemsList.Add(new CustomItem(new byte[] { 22 }, "Moon Pearl"));//MoonPearl 22
-             itemsList.Add(new CustomItem(new byte[] { 23, 38, 39, 40 }, "Sword"));//Sword 23
-             itemsList.Add(new CustomItem(new byte[] { 24, 44, 45 }, "Shield"));//Shield 24
-             itemsList.Add(new CustomItem(new byte[] { 25, 41, 42 }, "Tunic"));//Tunic //25
-             itemsList.Add(new CustomItem(new byte[] { 26, 26, 50, 51, 52, 53, 54, 54 }, "Bottle 1",false,true));//Bottle1 26
-             itemsList.Add(new CustomItem(new byte[] { 26, 26, 50, 51, 52, 53, 54, 54 }, "Bottle 2",false,true));//Bottle2 27
-             itemsList.Add(new CustomItem(new byte[] { 26, 26, 50, 51, 52, 53, 54, 54 }, "Bottle 3",false,true));//Bottle3 28
-             itemsList.Add(new CustomItem(new byte[] { 26, 26, 50, 51, 52, 53, 54, 54 }, "Bottle 4",false,true));//Bottle4 29
-             itemsList.Add(new CustomItem(new byte[] { 27 }, "Eastern Pendant"));//Eastern (Green) //30
-             itemsList.Add(new CustomItem(new byte[] { 28 }, "Desert Pendant"));//Desert (Blue) 31
-             itemsList.Add(new CustomItem(new byte[] { 29 }, "Hera Pendant"));//Hera (Red) 32
-             itemsList.Add(new CustomItem(new byte[] { 30 }, "Crystal 1"));//Crystal 1  33 pod
-             itemsList.Add(new CustomItem(new byte[] { 31 }, "Crystal 2"));//Crystal 2  34 swamp
-             itemsList.Add(new CustomItem(new byte[] { 32 }, "Crystal 3"));//Crystal 3 35 sw
-             itemsList.Add(new CustomItem(new byte[] { 33 }, "Crystal 4"));//Crystal 4 36 tt
-             itemsList.Add(new CustomItem(new byte[] { 34 }, "Crystal 5"));//Crystal 5 37 ice
-             itemsList.Add(new CustomItem(new byte[] { 35 }, "Crystal 6"));//Crystal 6 38 mm
-             itemsList.Add(new CustomItem(new byte[] { 36 }, "Crystal 7"));//Crystal 7 //39 trock
-             itemsList.Add(new CustomItem(new byte[] { 37 }, "Red Boomerang"));//Red Boomerang 40
-             itemsList.Add(new CustomItem(new byte[] { 46 }, "Powder"));//Powder 41
-             itemsList.Add(new CustomItem(new byte[] { 47 }, "Flute"));//Flute 42
-             itemsList.Add(new CustomItem(new byte[] { 55 }, "Agahnim"));//Agahnim //43
-             itemsList.Add(new CustomItem(new byte[] { 58, 59 }, "Chest"));//Agahnim //44
-             itemsList.Add(new CustomItem(new byte[] { 60 }, "Sanc Heart"));//Agahnim //45
-             itemsList.Add(new CustomItem(new byte[] { 61 }, "Item Id 61"));//Agahnim //46
-             itemsList.Add(new CustomItem(new byte[] { 62 }, "Item Id 62"));//Agahnim //47
-             itemsList.Add(new CustomItem(new byte[] { 63 }, "Item Id 63"));//Agahnim //48
-             itemsList.Add(new CustomItem(new byte[] { 64 }, "Item Id 64"));//Agahnim //49
-             itemsList.Add(new CustomItem(new byte[] { 65 }, "Item Id 65"));//Agahnim //50
-             itemsList.Add(new CustomItem(new byte[] { 66,67,68,69 }, "Heart Pieces",true));//Agahnim //51
-             itemsList.Add(new CustomItem(new byte[] { 70, 71, 72, 73 }, "Bottle Counter"));//Agahnim //52
-             itemsList.Add(new CustomItem(new byte[] { 26, 71, 72, 73 }, "Bottle Counter2"));//Agahnim //53*/
-
-			//itemsList[51].on = true;
-
 			string[] s = File.ReadAllLines("itemlist.txt");
 
 			foreach (string line in s)
@@ -383,7 +296,7 @@ namespace zeldaGui
 		}
 
 
-		public void setDefaultItems()
+		public void SetDefaultItems()
 		{
 			//30,31,32,17,25,60,36,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
 			byte[] ditems = new byte[] {15 ,0 ,1 ,2 ,3 ,41,30,
@@ -412,7 +325,7 @@ namespace zeldaGui
 
 		byte widthIcons = 7;
 		byte heightIcons = 6;
-		private void Form1_ResizeEnd(object sender, EventArgs e)
+		private void ZeldaHUD_ResizeEnd(object sender, EventArgs e)
 		{
 
 			//Resize the form to always be a multiple of 32
@@ -437,11 +350,11 @@ namespace zeldaGui
 			Size = new Size((w) + 16, (h) + 7);
 			widthIcons = (byte)(w / 32);
 			heightIcons = (byte)((h / 32) - 1);
-			drawIcons();
+			DrawIcons();
 
 		}
 		bool editMode = false;
-		private void toolStripMenuItem1_Click(object sender, EventArgs e)
+		private void ToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
 			if (toolStripMenuItem1.Checked)
 			{
@@ -460,7 +373,7 @@ namespace zeldaGui
 		CustomItem swapped = null;
 		int xdpos = -1;
 		int ydpos = -1;
-		private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+		private void PictureBox1_MouseDown(object sender, MouseEventArgs e)
 		{
 			if (editMode == true)
 			{
@@ -477,7 +390,7 @@ namespace zeldaGui
 			}
 		}
 
-		private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+		private void PictureBox1_MouseUp(object sender, MouseEventArgs e)
 		{
 			if (editMode == true)
 			{
@@ -512,7 +425,7 @@ namespace zeldaGui
 					}
 				}
 			}
-			drawIcons();
+			DrawIcons();
 		}
 
 
@@ -520,7 +433,7 @@ namespace zeldaGui
 		DateTime timeended;
 		bool timerend = false;
 		bool uiChanged = false;
-		private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+		private void PictureBox1_MouseClick(object sender, MouseEventArgs e)
 		{
 			int mX = (e.X / 32);
 			int mY = (e.Y / 32);
@@ -686,34 +599,26 @@ namespace zeldaGui
 					}
 				}
 			}
-			drawIcons();
+			DrawIcons();
 		}
 
-		private void toolStripMenuItem2_Click(object sender, EventArgs e)
+		private void ToolStripMenuItem2_Click(object sender, EventArgs e)
 		{
 			OptionsForm of = new OptionsForm();
 			of.checkBox1.Checked = checkUpdate;
-			of.iconset = currentIconset;
-			of.bgr = currentBgr;
+			of.iconset = currentIconSet;
+			of.bgr = currentBG;
 			of.ShowDialog();
 			checkUpdate = of.checkBox1.Checked;
-			currentBgr = of.bgr;
-			loadIconsSet(of.iconset);
-			drawIcons();
+			currentBG = of.bgr;
+			LoadIconsSet(of.iconset);
+			DrawIcons();
 		}
 
-		private void topMostToolStripMenuItem_Click(object sender, EventArgs e)
+		private void TopMostToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			if (TopMost == false)
-			{
-				TopMost = true;
-				topMostToolStripMenuItem.Checked = true;
-			}
-			else
-			{
-				TopMost = false;
-				topMostToolStripMenuItem.Checked = false;
-			}
+			TopMost = !TopMost;
+			topMostToolStripMenuItem.Checked = TopMost;
 		}
 		bool autoUpdate = false;
 		private void toolStripMenuItem3_Click(object sender, EventArgs e)
@@ -732,7 +637,7 @@ namespace zeldaGui
 
 		}
 
-		private void Form1_FormClosing(object sender, CancelEventArgs e)
+		private void ZeldaHUD_FormClosing(object sender, CancelEventArgs e)
 		{
 			if (uiChanged == true)
 			{
@@ -750,17 +655,19 @@ namespace zeldaGui
 
 
 
-		public void autoUpdateHud()
+		public void AutoUpdateHud()
 		{
-			if (autoUpdate == true)
+			if (autoUpdate)
 			{
 				if (File.Exists(openFileDialog1.FileName))
 				{
 					try
 					{
 						byte[] buffer = new byte[255];
-						FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
-						fs.Position = 0x1E00;
+						FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read)
+						{
+							Position = 0x1E00
+						};
 						fs.Read(buffer, 0, 255);
 						fs.Close();
 
@@ -769,8 +676,12 @@ namespace zeldaGui
 						//(16 - 23 somaria to moon pearl) -1 list
 						for (int i = 0; i < 15; i++)
 						{
-
-							if (buffer[i] != 0)
+							if (buffer[i] == 0)
+							{
+								itemsList[i].level = 0;
+								itemsList[i].on = false;
+							}
+							else
 							{
 								if (i != 1)//bomerang
 								{
@@ -975,7 +886,7 @@ namespace zeldaGui
 						}
 
 
-						drawIcons();
+						DrawIcons();
 					}
 					catch (Exception e)
 					{
@@ -988,7 +899,7 @@ namespace zeldaGui
 		private void timer1_Tick(object sender, EventArgs e)
 		{
 			//Autoupdate
-			autoUpdateHud();
+			AutoUpdateHud();
 		}
 
 		private void helpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1011,13 +922,13 @@ namespace zeldaGui
 			config[4] = "winposx=" + Location.X;
 			config[5] = "winposy=" + Location.Y;
 			config[6] = "color=" + clearColor.ToArgb();
-			config[7] = "iconset=" + currentIconset;
+			config[7] = "iconset=" + currentIconSet;
 			if (checkUpdate)
 			{ b = 1; }
 			else
 			{ b = 0; }
 			config[8] = "checkupdate=" + b;
-			config[9] = "background=" + currentBgr;
+			config[9] = "background=" + currentBG;
 
 			File.WriteAllLines("layout.config", config);
 		}
@@ -1047,10 +958,10 @@ namespace zeldaGui
 				else
 				{ checkUpdate = false; }
 				clearColor = Color.FromArgb(Convert.ToInt32(s[6].Split('=')[1]));
-				currentIconset = s[7].Split('=')[1];
+				currentIconSet = s[7].Split('=')[1];
 				if (s.Length >= 10)
 				{
-					currentBgr = s[9].Split('=')[1];
+					currentBG = s[9].Split('=')[1];
 				}
 
 
@@ -1074,7 +985,7 @@ namespace zeldaGui
 				Size = new Size((w * 32) + 16, ((h + 1) * 32) + 7);
 				widthIcons = (byte)(w);
 				heightIcons = (byte)((h));
-				drawIcons();
+				DrawIcons();
 			}
 		}
 
@@ -1102,44 +1013,6 @@ namespace zeldaGui
 			return s;
 		}
 
-		private void importOldLayoutToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			if (openFileDialog2.ShowDialog() == DialogResult.Cancel)
-			{
-
-			}
-			else
-			{
-				/*string[] s = File.ReadAllLines(openFileDialog2.FileName);
-
-                int w = Convert.ToInt32(s[0].Split('=')[1]);
-                int h = Convert.ToInt32(s[1].Split('=')[1]);
-                string[] itl = s[3].Split('=')[1].Split(',');
-                int p = 0;
-                for (int x = 0; x < w; x++)
-                {
-                    for (int y = 0; y < h; y++)
-                    {
-                        if (Convert.ToInt32(itl[p]) != 254)
-                        {
-                            itemsArray[x, y] = itemsList[Convert.ToInt32(itl[p])];
-                        }
-                        else
-                        {
-                            itemsArray[x, y] = null;
-                        }
-                        p++;
-                    }
-                }
-                        this.Size = new Size((w*32) + 16, ((h+1)*32) + 7);
-                widthIcons = (byte)(w);
-                heightIcons = (byte)((h) - 1);*/
-
-				loadLayout(openFileDialog2.FileName);
-				drawIcons();
-			}
-		}
-
 		private void clearItemsToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			for (int x = 0; x < 24; x++)
@@ -1153,7 +1026,7 @@ namespace zeldaGui
 					}
 				}
 			}
-			drawIcons();
+			DrawIcons();
 		}
 
 		private void showStatsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1200,7 +1073,7 @@ namespace zeldaGui
 		Point timerpospixel;
 		private void timer2_Tick(object sender, EventArgs e)
 		{
-			drawIcons();
+			DrawIcons();
 		}
 	}
 }

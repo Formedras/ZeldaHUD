@@ -1,7 +1,7 @@
-//Please note the first 45 items (45 is Agahnim) 
-//order should not be changed if you use auto-update
-//<- commentary not readed by the program 
-//Also do not use , in item name :p
+// If updating via SRAM, do not change the order of items before (and including) Agahnim.
+// The current SRAM update code requires these items be first, and in the current order.
+// Future versions will use a different format, not dependant on item order.
+// Do not use commas (',') as part of item names.
 
 //Name, {Icons Order},Loop,isBottle,haveCount
 :Bow,{0,48,49,49},false,false,false;

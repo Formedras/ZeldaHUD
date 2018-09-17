@@ -1,0 +1,516 @@
+{
+  "Items": [
+    {
+      "Name": "Bow",
+      "Icons": [ "Bow.png", "Bow_and_Arrows.png", "Bow_and_Silver_Arrows.png", "Bow_and_Silver_Arrows.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Boomerang",
+      "Icons": [ "Blue_Boomerang.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Hookshot",
+      "Icons": [ "Hookshot.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Bombs",
+      "Icons": [ "Bomb.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Mushroom",
+      "Icons": [ "Mushroom.png", "Mushroom_(Turned_In).png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Fire Rod",
+      "Icons": [ "Fire_Rod.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Ice Rod",
+      "Icons": [ "Ice_Rod.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Bombos",
+      "Icons": [ "Bombos_Medallion.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Ether",
+      "Icons": [ "Ether_Medallion.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Quake",
+      "Icons": [ "Quake_Medallion.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Lamp",
+      "Icons": [ "Lamp.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Hammer",
+      "Icons": [ "Hammer.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Shovel",
+      "Icons": [ "Shovel.png", "Shovel_(Turned_In).png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Net",
+      "Icons": [ "Net.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Book",
+      "Icons": [ "Book_of_Mudora.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Cane of Somaria",
+      "Icons": [ "Cane_of_Somaria.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Cane of Byrna",
+      "Icons": [ "Cane_of_Byrna.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Cape",
+      "Icons": [ "Cape.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Mirror",
+      "Icons": [ "Magic_Mirror.png", "Magic_Mirror.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Gloves",
+      "Icons": [ "Power_Gloves.png", "Titan's_Mitt.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Boots",
+      "Icons": [ "Pegasus_Boots.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Flippers",
+      "Icons": [ "Zora's_Flippers.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Moon Pearl",
+      "Icons": [ "Moon_Pearl.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Swords",
+      "Icons": [ "Fighter's_Sword.png", "Master_Sword.png", "Tempered_Sword.png", "Golden_Sword.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Shield",
+      "Icons": [ "Fighter's_Shield.png", "Fire_Shield.png", "Mirror_Shield.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Tunic",
+      "Icons": [ "Green_Tunic.png", "Blue_Tunic.png", "Red_Tunic.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Bottle 1",
+      "Icons": [ "Bottle.png", "Bottle.png", "Bottle_(Red_Potion).png", "Bottle_(Green_Potion).png", "Bottle_(Blue_Potion).png", "Bottle_(Fairy).png", "Bottle_(Bee).png", "Bottle_(Bee).png" ],
+      "Loop": "false",
+      "Bottle": "true",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Bottle 2",
+      "Icons": [ "Bottle.png", "Bottle.png", "Bottle_(Red_Potion).png", "Bottle_(Green_Potion).png", "Bottle_(Blue_Potion).png", "Bottle_(Fairy).png", "Bottle_(Bee).png", "Bottle_(Bee).png" ],
+      "Loop": "false",
+      "Bottle": "true",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Bottle 3",
+      "Icons": [ "Bottle.png", "Bottle.png", "Bottle_(Red_Potion).png", "Bottle_(Green_Potion).png", "Bottle_(Blue_Potion).png", "Bottle_(Fairy).png", "Bottle_(Bee).png", "Bottle_(Bee).png" ],
+      "Loop": "false",
+      "Bottle": "true",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Bottle 4",
+      "Icons": [ "Bottle.png", "Bottle.png", "Bottle_(Red_Potion).png", "Bottle_(Green_Potion).png", "Bottle_(Blue_Potion).png", "Bottle_(Fairy).png", "Bottle_(Bee).png", "Bottle_(Bee).png" ],
+      "Loop": "false",
+      "Bottle": "true",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Pendant of Courage",
+      "Icons": [ "Pendant_of_Courage.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Pendant of Power",
+      "Icons": [ "Pendant_of_Power.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Pendant of Wisdom",
+      "Icons": [ "Pendant_of_Wisdom.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Crystal 1",
+      "Icons": [ "Crystal_1.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Crystal 2",
+      "Icons": [ "Crystal_2.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Crystal 3",
+      "Icons": [ "Crystal_3.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Crystal 4",
+      "Icons": [ "Crystal_4.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Crystal 5",
+      "Icons": [ "Crystal_5.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Crystal 6",
+      "Icons": [ "Crystal_6.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Crystal 7",
+      "Icons": [ "Crystal_7.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Red Boomerang",
+      "Icons": [ "Red_Boomerang.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Powder",
+      "Icons": [ "Magic_Powder.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Flute",
+      "Icons": [ "Flute.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Agahnim",
+      "Icons": [ "Agahnim.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Timer",
+      "Icons": [ "%NSF%\\%SFN%\\Timer_0.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Timer_Start",
+      "Icons": [ "Go.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Timer_Done",
+      "Icons": [ "Stop.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Timer_StartDone",
+      "Icons": [ "Go.png", "Stop.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Nothing",
+      "Icons": [ "Bottle_(Fairy).png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Nothing",
+      "Icons": [ "Bottle_(Bee).png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Nothing",
+      "Icons": [ "Agahnim.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Chest",
+      "Icons": [ "Treasure_Chest.png", "Treasure_Chest_(Opened).png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Sanc Heart",
+      "Icons": [ "Heart_Container.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Heart Pieces",
+      "Icons": [ "Pieces_of_Heart_(0).png", "Pieces_of_Heart_(1).png", "Pieces_of_Heart_(2).png", "Pieces_of_Heart_(3).png" ],
+      "Loop": "true",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Heart Pieces",
+      "Icons": [ "Pieces_of_Heart_(0).png", "Pieces_of_Heart_(1).png", "Pieces_of_Heart_(2).png", "Pieces_of_Heart_(3).png" ],
+      "Loop": "true",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Bottle Counter",
+      "Icons": [ "Bottle_1.png", "Bottle_2.png", "Bottle_3.png", "Bottle_4.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Bottle Counter 2",
+      "Icons": [ "Bottle.png", "Bottle_2.png", "Bottle_3.png", "Bottle_4.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Shovel/Flute",
+      "Icons": [ "Shovel.png", "Flute.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "MushPowder",
+      "Icons": [ "Magic_Powder.png", "Mushroom.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "BothBoomerang",
+      "Icons": [ "Blue_Boomerang", "Red_Boomerang.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "DoubleQuarterMagic",
+      "Icons": [ "Half_Magic.png", "Quarter_Magic.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "false",
+      "Offset": "0"
+    },
+    {
+      "Name": "Heart Containers (Counter)",
+      "Icons": [ "Heart_Container.png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "true",
+      "Offset": "0"
+    },
+    {
+      "Name": "Heart Pieces (Counter)",
+      "Icons": [ "Pieces_of_Heart_(1).png" ],
+      "Loop": "false",
+      "Bottle": "false",
+      "Counter": "true",
+      "Offset": "0"
+    },
+    {
+      "Name": "Heart Pieces (Progress & Counter)",
+      "Icons": [ "Pieces_of_Heart_(0).png", "Pieces_of_Heart_(1).png", "Pieces_of_Heart_(2).png", "Pieces_of_Heart_(3).png" ],
+      "Loop": "true",
+      "Bottle": "false",
+      "Counter": "true",
+      "Offset": "0"
+    }
+  ]
+}

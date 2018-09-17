@@ -20,15 +20,15 @@ namespace zeldaGui
         public string iconset = @"IconsSets\Defaults";
         private void panel1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            colorDialog1.Color = Form1.clearColor;
+            colorDialog1.Color = ZeldaHUD.clearColor;
             colorDialog1.ShowDialog();
-            Form1.clearColor = colorDialog1.Color;
+            ZeldaHUD.clearColor = colorDialog1.Color;
             panel1.BackColor = colorDialog1.Color;
         }
 
         private void OptionsForm_Load(object sender, EventArgs e)
         {
-            panel1.BackColor = Form1.clearColor;
+            panel1.BackColor = ZeldaHUD.clearColor;
             label3.MaximumSize = new Size(250, 200);
             label3.AutoSize = true;
             label3.Text = iconset;

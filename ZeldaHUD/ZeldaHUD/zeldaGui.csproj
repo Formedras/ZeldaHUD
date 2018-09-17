@@ -50,11 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomItem.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="ZeldaHUD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ZeldaHUD.Designer.cs">
+      <DependentUpon>ZeldaHUD.cs</DependentUpon>
     </Compile>
     <Compile Include="ItemSelectorForm.cs">
       <SubType>Form</SubType>
@@ -83,8 +83,8 @@
       <DependentUpon>TilesetChooserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Version.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ZeldaHUD.resx">
+      <DependentUpon>ZeldaHUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemSelectorForm.resx">
       <DependentUpon>ItemSelectorForm.cs</DependentUpon>
@@ -107,6 +107,7 @@
     <EmbeddedResource Include="TilesetChooserForm.resx">
       <DependentUpon>TilesetChooserForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ItemList.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -136,1135 +137,1215 @@
     <Content Include="Backgrounds\plainblack.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0000.png">
+    <Content Include="IconSets\Default\0000.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0001.png">
+    <Content Include="IconSets\Default\0001.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0002.png">
+    <Content Include="IconSets\Default\0002.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0003.png">
+    <Content Include="IconSets\Default\0003.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0004.png">
+    <Content Include="IconSets\Default\0004.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0005.png">
+    <Content Include="IconSets\Default\0005.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0006.png">
+    <Content Include="IconSets\Default\0006.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0007.png">
+    <Content Include="IconSets\Default\0007.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0008.png">
+    <Content Include="IconSets\Default\0008.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0009.png">
+    <Content Include="IconSets\Default\0009.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0010.png">
+    <Content Include="IconSets\Default\0010.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0011.png">
+    <Content Include="IconSets\Default\0011.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0012.png">
+    <Content Include="IconSets\Default\0012.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0013.png">
+    <Content Include="IconSets\Default\0013.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0014.png">
+    <Content Include="IconSets\Default\0014.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0015.png">
+    <Content Include="IconSets\Default\0015.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0016.png">
+    <Content Include="IconSets\Default\0016.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0017.png">
+    <Content Include="IconSets\Default\0017.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0018.png">
+    <Content Include="IconSets\Default\0018.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0019.png">
+    <Content Include="IconSets\Default\0019.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0020.png">
+    <Content Include="IconSets\Default\0020.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0021.png">
+    <Content Include="IconSets\Default\0021.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0022.png">
+    <Content Include="IconSets\Default\0022.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0023.png">
+    <Content Include="IconSets\Default\0023.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0024.png">
+    <Content Include="IconSets\Default\0024.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0025.png">
+    <Content Include="IconSets\Default\0025.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0026.png">
+    <Content Include="IconSets\Default\0026.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0027.png">
+    <Content Include="IconSets\Default\0027.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0028.png">
+    <Content Include="IconSets\Default\0028.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0029.png">
+    <Content Include="IconSets\Default\0029.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0030.png">
+    <Content Include="IconSets\Default\0030.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0031.png">
+    <Content Include="IconSets\Default\0031.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0032.png">
+    <Content Include="IconSets\Default\0032.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0033.png">
+    <Content Include="IconSets\Default\0033.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0034.png">
+    <Content Include="IconSets\Default\0034.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0035.png">
+    <Content Include="IconSets\Default\0035.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0036.png">
+    <Content Include="IconSets\Default\0036.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0037.png">
+    <Content Include="IconSets\Default\0037.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0038.png">
+    <Content Include="IconSets\Default\0038.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0039.png">
+    <Content Include="IconSets\Default\0039.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0040.png">
+    <Content Include="IconSets\Default\0040.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0041.png">
+    <Content Include="IconSets\Default\0041.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0042.png">
+    <Content Include="IconSets\Default\0042.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0043.png">
+    <Content Include="IconSets\Default\0043.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0044.png">
+    <Content Include="IconSets\Default\0044.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0045.png">
+    <Content Include="IconSets\Default\0045.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0046.png">
+    <Content Include="IconSets\Default\0046.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0047.png">
+    <Content Include="IconSets\Default\0047.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0048.png">
+    <Content Include="IconSets\Default\0048.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0049.png">
+    <Content Include="IconSets\Default\0049.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0050.png">
+    <Content Include="IconSets\Default\0050.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0051.png">
+    <Content Include="IconSets\Default\0051.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0052.png">
+    <Content Include="IconSets\Default\0052.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0053.png">
+    <Content Include="IconSets\Default\0053.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0054.png">
+    <Content Include="IconSets\Default\0054.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0055.png">
+    <Content Include="IconSets\Default\0055.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0056.png">
+    <Content Include="IconSets\Default\0056.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0057.png">
+    <Content Include="IconSets\Default\0057.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0058.png">
+    <Content Include="IconSets\Default\0058.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0059.png">
+    <Content Include="IconSets\Default\0059.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0060.png">
+    <Content Include="IconSets\Default\0060.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0061.png">
+    <Content Include="IconSets\Default\0061.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0062.png">
+    <Content Include="IconSets\Default\0062.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0063.png">
+    <Content Include="IconSets\Default\0063.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0064.png">
+    <Content Include="IconSets\Default\0064.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0065.png">
+    <Content Include="IconSets\Default\0065.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0066.png">
+    <Content Include="IconSets\Default\0066.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0067.png">
+    <Content Include="IconSets\Default\0067.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0068.png">
+    <Content Include="IconSets\Default\0068.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0069.png">
+    <Content Include="IconSets\Default\0069.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0070.png">
+    <Content Include="IconSets\Default\0070.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0071.png">
+    <Content Include="IconSets\Default\0071.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0072.png">
+    <Content Include="IconSets\Default\0072.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0073.png">
+    <Content Include="IconSets\Default\0073.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0074.png">
+    <Content Include="IconSets\Default\0074.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0075.png">
+    <Content Include="IconSets\Default\0075.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Defaults\0076.png">
+    <Content Include="IconSets\Default\0076.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0000.png">
+    <Content Include="IconSets\GBC\0000.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0001.png">
+    <Content Include="IconSets\GBC\0001.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0002.png">
+    <Content Include="IconSets\GBC\0002.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0003.png">
+    <Content Include="IconSets\GBC\0003.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0004.png">
+    <Content Include="IconSets\GBC\0004.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0005.png">
+    <Content Include="IconSets\GBC\0005.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0006.png">
+    <Content Include="IconSets\GBC\0006.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0007.png">
+    <Content Include="IconSets\GBC\0007.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0008.png">
+    <Content Include="IconSets\GBC\0008.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0009.png">
+    <Content Include="IconSets\GBC\0009.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0010.png">
+    <Content Include="IconSets\GBC\0010.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0011.png">
+    <Content Include="IconSets\GBC\0011.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0012.png">
+    <Content Include="IconSets\GBC\0012.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0013.png">
+    <Content Include="IconSets\GBC\0013.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0014.png">
+    <Content Include="IconSets\GBC\0014.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0015.png">
+    <Content Include="IconSets\GBC\0015.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0016.png">
+    <Content Include="IconSets\GBC\0016.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0017.png">
+    <Content Include="IconSets\GBC\0017.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0018.png">
+    <Content Include="IconSets\GBC\0018.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0019.png">
+    <Content Include="IconSets\GBC\0019.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0020.png">
+    <Content Include="IconSets\GBC\0020.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0021.png">
+    <Content Include="IconSets\GBC\0021.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0022.png">
+    <Content Include="IconSets\GBC\0022.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0023.png">
+    <Content Include="IconSets\GBC\0023.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0024.png">
+    <Content Include="IconSets\GBC\0024.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0025.png">
+    <Content Include="IconSets\GBC\0025.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0026.png">
+    <Content Include="IconSets\GBC\0026.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0027.png">
+    <Content Include="IconSets\GBC\0027.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0028.png">
+    <Content Include="IconSets\GBC\0028.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0029.png">
+    <Content Include="IconSets\GBC\0029.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0030.png">
+    <Content Include="IconSets\GBC\0030.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0031.png">
+    <Content Include="IconSets\GBC\0031.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0032.png">
+    <Content Include="IconSets\GBC\0032.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0033.png">
+    <Content Include="IconSets\GBC\0033.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0034.png">
+    <Content Include="IconSets\GBC\0034.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0035.png">
+    <Content Include="IconSets\GBC\0035.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0036.png">
+    <Content Include="IconSets\GBC\0036.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0037.png">
+    <Content Include="IconSets\GBC\0037.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0038.png">
+    <Content Include="IconSets\GBC\0038.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0039.png">
+    <Content Include="IconSets\GBC\0039.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0040.png">
+    <Content Include="IconSets\GBC\0040.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0041.png">
+    <Content Include="IconSets\GBC\0041.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0042.png">
+    <Content Include="IconSets\GBC\0042.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0043.png">
+    <Content Include="IconSets\GBC\0043.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0044.png">
+    <Content Include="IconSets\GBC\0044.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0045.png">
+    <Content Include="IconSets\GBC\0045.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0046.png">
+    <Content Include="IconSets\GBC\0046.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0047.png">
+    <Content Include="IconSets\GBC\0047.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0048.png">
+    <Content Include="IconSets\GBC\0048.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0049.png">
+    <Content Include="IconSets\GBC\0049.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0050.png">
+    <Content Include="IconSets\GBC\0050.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0051.png">
+    <Content Include="IconSets\GBC\0051.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0052.png">
+    <Content Include="IconSets\GBC\0052.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0053.png">
+    <Content Include="IconSets\GBC\0053.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0054.png">
+    <Content Include="IconSets\GBC\0054.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0055.png">
+    <Content Include="IconSets\GBC\0055.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0056.png">
+    <Content Include="IconSets\GBC\0056.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0057.png">
+    <Content Include="IconSets\GBC\0057.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0058.png">
+    <Content Include="IconSets\GBC\0058.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0059.png">
+    <Content Include="IconSets\GBC\0059.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0060.png">
+    <Content Include="IconSets\GBC\0060.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0061.png">
+    <Content Include="IconSets\GBC\0061.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0062.png">
+    <Content Include="IconSets\GBC\0062.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0063.png">
+    <Content Include="IconSets\GBC\0063.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0064.png">
+    <Content Include="IconSets\GBC\0064.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0065.png">
+    <Content Include="IconSets\GBC\0065.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0066.png">
+    <Content Include="IconSets\GBC\0066.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0067.png">
+    <Content Include="IconSets\GBC\0067.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0068.png">
+    <Content Include="IconSets\GBC\0068.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0069.png">
+    <Content Include="IconSets\GBC\0069.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0070.png">
+    <Content Include="IconSets\GBC\0070.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0071.png">
+    <Content Include="IconSets\GBC\0071.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0072.png">
+    <Content Include="IconSets\GBC\0072.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\gbc\0073.png">
+    <Content Include="IconSets\GBC\0073.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Global\count.png">
+    <Content Include="IconSets\Default\count.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Global\timer.png">
+    <Content Include="IconSets\Default\timer.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0000.png">
+    <Content Include="IconSets\Usage\0000.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0001.png">
+    <Content Include="IconSets\Usage\0001.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0002.png">
+    <Content Include="IconSets\Usage\0002.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0003.png">
+    <Content Include="IconSets\Usage\0003.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0004.png">
+    <Content Include="IconSets\Usage\0004.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0005.png">
+    <Content Include="IconSets\Usage\0005.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0006.png">
+    <Content Include="IconSets\Usage\0006.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0007.png">
+    <Content Include="IconSets\Usage\0007.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0008.png">
+    <Content Include="IconSets\Usage\0008.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0009.png">
+    <Content Include="IconSets\Usage\0009.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0010.png">
+    <Content Include="IconSets\Usage\0010.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0011.png">
+    <Content Include="IconSets\Usage\0011.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0012.png">
+    <Content Include="IconSets\Usage\0012.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0013.png">
+    <Content Include="IconSets\Usage\0013.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0014.png">
+    <Content Include="IconSets\Usage\0014.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0015.png">
+    <Content Include="IconSets\Usage\0015.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0016.png">
+    <Content Include="IconSets\Usage\0016.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0017.png">
+    <Content Include="IconSets\Usage\0017.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0018.png">
+    <Content Include="IconSets\Usage\0018.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0019.png">
+    <Content Include="IconSets\Usage\0019.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0020.png">
+    <Content Include="IconSets\Usage\0020.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0021.png">
+    <Content Include="IconSets\Usage\0021.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0022.png">
+    <Content Include="IconSets\Usage\0022.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0023.png">
+    <Content Include="IconSets\Usage\0023.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0024.png">
+    <Content Include="IconSets\Usage\0024.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0025.png">
+    <Content Include="IconSets\Usage\0025.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0026.png">
+    <Content Include="IconSets\Usage\0026.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0027.png">
+    <Content Include="IconSets\Usage\0027.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0028.png">
+    <Content Include="IconSets\Usage\0028.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0029.png">
+    <Content Include="IconSets\Usage\0029.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0030.png">
+    <Content Include="IconSets\Usage\0030.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0031.png">
+    <Content Include="IconSets\Usage\0031.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0032.png">
+    <Content Include="IconSets\Usage\0032.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0033.png">
+    <Content Include="IconSets\Usage\0033.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0034.png">
+    <Content Include="IconSets\Usage\0034.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0035.png">
+    <Content Include="IconSets\Usage\0035.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0036.png">
+    <Content Include="IconSets\Usage\0036.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0037.png">
+    <Content Include="IconSets\Usage\0037.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0038.png">
+    <Content Include="IconSets\Usage\0038.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0039.png">
+    <Content Include="IconSets\Usage\0039.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0040.png">
+    <Content Include="IconSets\Usage\0040.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0041.png">
+    <Content Include="IconSets\Usage\0041.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0042.png">
+    <Content Include="IconSets\Usage\0042.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0043.png">
+    <Content Include="IconSets\Usage\0043.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0044.png">
+    <Content Include="IconSets\Usage\0044.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0045.png">
+    <Content Include="IconSets\Usage\0045.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0046.png">
+    <Content Include="IconSets\Usage\0046.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0047.png">
+    <Content Include="IconSets\Usage\0047.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0048.png">
+    <Content Include="IconSets\Usage\0048.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0049.png">
+    <Content Include="IconSets\Usage\0049.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0050.png">
+    <Content Include="IconSets\Usage\0050.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0051.png">
+    <Content Include="IconSets\Usage\0051.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0052.png">
+    <Content Include="IconSets\Usage\0052.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0053.png">
+    <Content Include="IconSets\Usage\0053.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0054.png">
+    <Content Include="IconSets\Usage\0054.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0055.png">
+    <Content Include="IconSets\Usage\0055.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0056.png">
+    <Content Include="IconSets\Usage\0056.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0057.png">
+    <Content Include="IconSets\Usage\0057.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0058.png">
+    <Content Include="IconSets\Usage\0058.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0059.png">
+    <Content Include="IconSets\Usage\0059.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0060.png">
+    <Content Include="IconSets\Usage\0060.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0061.png">
+    <Content Include="IconSets\Usage\0061.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0062.png">
+    <Content Include="IconSets\Usage\0062.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0063.png">
+    <Content Include="IconSets\Usage\0063.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0064.png">
+    <Content Include="IconSets\Usage\0064.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0065.png">
+    <Content Include="IconSets\Usage\0065.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0066.png">
+    <Content Include="IconSets\Usage\0066.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0067.png">
+    <Content Include="IconSets\Usage\0067.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0068.png">
+    <Content Include="IconSets\Usage\0068.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0069.png">
+    <Content Include="IconSets\Usage\0069.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0070.png">
+    <Content Include="IconSets\Usage\0070.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0071.png">
+    <Content Include="IconSets\Usage\0071.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0072.png">
+    <Content Include="IconSets\Usage\0072.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\InGame\0073.png">
+    <Content Include="IconSets\Usage\0073.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0000.png">
+    <Content Include="IconSets\MinishCap\0000.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0001.png">
+    <Content Include="IconSets\MinishCap\0001.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0002.png">
+    <Content Include="IconSets\MinishCap\0002.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0003.png">
+    <Content Include="IconSets\MinishCap\0003.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0004.png">
+    <Content Include="IconSets\MinishCap\0004.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0005.png">
+    <Content Include="IconSets\MinishCap\0005.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0006.png">
+    <Content Include="IconSets\MinishCap\0006.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0007.png">
+    <Content Include="IconSets\MinishCap\0007.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0008.png">
+    <Content Include="IconSets\MinishCap\0008.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0009.png">
+    <Content Include="IconSets\MinishCap\0009.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0010.png">
+    <Content Include="IconSets\MinishCap\0010.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0011.png">
+    <Content Include="IconSets\MinishCap\0011.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0012.png">
+    <Content Include="IconSets\MinishCap\0012.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0013.png">
+    <Content Include="IconSets\MinishCap\0013.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0014.png">
+    <Content Include="IconSets\MinishCap\0014.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0015.png">
+    <Content Include="IconSets\MinishCap\0015.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0016.png">
+    <Content Include="IconSets\MinishCap\0016.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0017.png">
+    <Content Include="IconSets\MinishCap\0017.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0018.png">
+    <Content Include="IconSets\MinishCap\0018.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0019.png">
+    <Content Include="IconSets\MinishCap\0019.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0020.png">
+    <Content Include="IconSets\MinishCap\0020.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0021.png">
+    <Content Include="IconSets\MinishCap\0021.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0022.png">
+    <Content Include="IconSets\MinishCap\0022.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0023.png">
+    <Content Include="IconSets\MinishCap\0023.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0024.png">
+    <Content Include="IconSets\MinishCap\0024.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0025.png">
+    <Content Include="IconSets\MinishCap\0025.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0026.png">
+    <Content Include="IconSets\MinishCap\0026.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0027.png">
+    <Content Include="IconSets\MinishCap\0027.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0028.png">
+    <Content Include="IconSets\MinishCap\0028.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0029.png">
+    <Content Include="IconSets\MinishCap\0029.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0030.png">
+    <Content Include="IconSets\MinishCap\0030.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0031.png">
+    <Content Include="IconSets\MinishCap\0031.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0032.png">
+    <Content Include="IconSets\MinishCap\0032.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0033.png">
+    <Content Include="IconSets\MinishCap\0033.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0034.png">
+    <Content Include="IconSets\MinishCap\0034.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0035.png">
+    <Content Include="IconSets\MinishCap\0035.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0036.png">
+    <Content Include="IconSets\MinishCap\0036.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0037.png">
+    <Content Include="IconSets\MinishCap\0037.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0038.png">
+    <Content Include="IconSets\MinishCap\0038.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0039.png">
+    <Content Include="IconSets\MinishCap\0039.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0040.png">
+    <Content Include="IconSets\MinishCap\0040.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0041.png">
+    <Content Include="IconSets\MinishCap\0041.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0042.png">
+    <Content Include="IconSets\MinishCap\0042.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0043.png">
+    <Content Include="IconSets\MinishCap\0043.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0044.png">
+    <Content Include="IconSets\MinishCap\0044.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0045.png">
+    <Content Include="IconSets\MinishCap\0045.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0046.png">
+    <Content Include="IconSets\MinishCap\0046.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0047.png">
+    <Content Include="IconSets\MinishCap\0047.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0048.png">
+    <Content Include="IconSets\MinishCap\0048.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0049.png">
+    <Content Include="IconSets\MinishCap\0049.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0050.png">
+    <Content Include="IconSets\MinishCap\0050.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0051.png">
+    <Content Include="IconSets\MinishCap\0051.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0052.png">
+    <Content Include="IconSets\MinishCap\0052.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0053.png">
+    <Content Include="IconSets\MinishCap\0053.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0054.png">
+    <Content Include="IconSets\MinishCap\0054.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0055.png">
+    <Content Include="IconSets\MinishCap\0055.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0056.png">
+    <Content Include="IconSets\MinishCap\0056.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0057.png">
+    <Content Include="IconSets\MinishCap\0057.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0058.png">
+    <Content Include="IconSets\MinishCap\0058.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0059.png">
+    <Content Include="IconSets\MinishCap\0059.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0060.png">
+    <Content Include="IconSets\MinishCap\0060.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0061.png">
+    <Content Include="IconSets\MinishCap\0061.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0062.png">
+    <Content Include="IconSets\MinishCap\0062.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0063.png">
+    <Content Include="IconSets\MinishCap\0063.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0064.png">
+    <Content Include="IconSets\MinishCap\0064.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0065.png">
+    <Content Include="IconSets\MinishCap\0065.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0066.png">
+    <Content Include="IconSets\MinishCap\0066.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0067.png">
+    <Content Include="IconSets\MinishCap\0067.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0068.png">
+    <Content Include="IconSets\MinishCap\0068.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0069.png">
+    <Content Include="IconSets\MinishCap\0069.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0070.png">
+    <Content Include="IconSets\MinishCap\0070.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0071.png">
+    <Content Include="IconSets\MinishCap\0071.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0072.png">
+    <Content Include="IconSets\MinishCap\0072.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\MinishCap\0073.png">
+    <Content Include="IconSets\MinishCap\0073.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0000.png">
+    <Content Include="IconSets\Zstyle\0000.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0001.png">
+    <Content Include="IconSets\Zstyle\0001.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0002.png">
+    <Content Include="IconSets\Zstyle\0002.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0003.png">
+    <Content Include="IconSets\Zstyle\0003.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0004.png">
+    <Content Include="IconSets\Zstyle\0004.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0005.png">
+    <Content Include="IconSets\Zstyle\0005.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0006.png">
+    <Content Include="IconSets\Zstyle\0006.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0007.png">
+    <Content Include="IconSets\Zstyle\0007.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0008.png">
+    <Content Include="IconSets\Zstyle\0008.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0009.png">
+    <Content Include="IconSets\Zstyle\0009.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0010.png">
+    <Content Include="IconSets\Zstyle\0010.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0011.png">
+    <Content Include="IconSets\Zstyle\0011.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0012.png">
+    <Content Include="IconSets\Zstyle\0012.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0013.png">
+    <Content Include="IconSets\Zstyle\0013.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0014.png">
+    <Content Include="IconSets\Zstyle\0014.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0015.png">
+    <Content Include="IconSets\Zstyle\0015.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0016.png">
+    <Content Include="IconSets\Zstyle\0016.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0017.png">
+    <Content Include="IconSets\Zstyle\0017.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0018.png">
+    <Content Include="IconSets\Zstyle\0018.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0019.png">
+    <Content Include="IconSets\Zstyle\0019.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0020.png">
+    <Content Include="IconSets\Zstyle\0020.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0021.png">
+    <Content Include="IconSets\Zstyle\0021.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0022.png">
+    <Content Include="IconSets\Zstyle\0022.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0023.png">
+    <Content Include="IconSets\Zstyle\0023.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0024.png">
+    <Content Include="IconSets\Zstyle\0024.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0025.png">
+    <Content Include="IconSets\Zstyle\0025.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0026.png">
+    <Content Include="IconSets\Zstyle\0026.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0027.png">
+    <Content Include="IconSets\Zstyle\0027.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0028.png">
+    <Content Include="IconSets\Zstyle\0028.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0029.png">
+    <Content Include="IconSets\Zstyle\0029.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0030.png">
+    <Content Include="IconSets\Zstyle\0030.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0031.png">
+    <Content Include="IconSets\Zstyle\0031.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0032.png">
+    <Content Include="IconSets\Zstyle\0032.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0033.png">
+    <Content Include="IconSets\Zstyle\0033.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0034.png">
+    <Content Include="IconSets\Zstyle\0034.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0035.png">
+    <Content Include="IconSets\Zstyle\0035.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0036.png">
+    <Content Include="IconSets\Zstyle\0036.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0037.png">
+    <Content Include="IconSets\Zstyle\0037.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0038.png">
+    <Content Include="IconSets\Zstyle\0038.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0039.png">
+    <Content Include="IconSets\Zstyle\0039.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0040.png">
+    <Content Include="IconSets\Zstyle\0040.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0041.png">
+    <Content Include="IconSets\Zstyle\0041.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0042.png">
+    <Content Include="IconSets\Zstyle\0042.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0043.png">
+    <Content Include="IconSets\Zstyle\0043.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0044.png">
+    <Content Include="IconSets\Zstyle\0044.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0045.png">
+    <Content Include="IconSets\Zstyle\0045.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0046.png">
+    <Content Include="IconSets\Zstyle\0046.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0047.png">
+    <Content Include="IconSets\Zstyle\0047.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0048.png">
+    <Content Include="IconSets\Zstyle\0048.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0049.png">
+    <Content Include="IconSets\Zstyle\0049.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0050.png">
+    <Content Include="IconSets\Zstyle\0050.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0051.png">
+    <Content Include="IconSets\Zstyle\0051.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0052.png">
+    <Content Include="IconSets\Zstyle\0052.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0053.png">
+    <Content Include="IconSets\Zstyle\0053.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0054.png">
+    <Content Include="IconSets\Zstyle\0054.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0055.png">
+    <Content Include="IconSets\Zstyle\0055.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0056.png">
+    <Content Include="IconSets\Zstyle\0056.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0057.png">
+    <Content Include="IconSets\Zstyle\0057.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0058.png">
+    <Content Include="IconSets\Zstyle\0058.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0059.png">
+    <Content Include="IconSets\Zstyle\0059.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0060.png">
+    <Content Include="IconSets\Zstyle\0060.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0061.png">
+    <Content Include="IconSets\Zstyle\0061.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0062.png">
+    <Content Include="IconSets\Zstyle\0062.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0063.png">
+    <Content Include="IconSets\Zstyle\0063.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0064.png">
+    <Content Include="IconSets\Zstyle\0064.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0065.png">
+    <Content Include="IconSets\Zstyle\0065.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0066.png">
+    <Content Include="IconSets\Zstyle\0066.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0067.png">
+    <Content Include="IconSets\Zstyle\0067.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0068.png">
+    <Content Include="IconSets\Zstyle\0068.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0069.png">
+    <Content Include="IconSets\Zstyle\0069.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0070.png">
+    <Content Include="IconSets\Zstyle\0070.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0071.png">
+    <Content Include="IconSets\Zstyle\0071.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0072.png">
+    <Content Include="IconSets\Zstyle\0072.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="IconsSets\Zstyle\0073.png">
+    <Content Include="IconSets\Zstyle\0073.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="itemlist.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="NewIconSets\InventoryMenu\Agahnim.png" />
+    <Content Include="NewIconSets\InventoryMenu\Blue_Boomerang.png" />
+    <Content Include="NewIconSets\InventoryMenu\Blue_Tunic.png" />
+    <Content Include="NewIconSets\InventoryMenu\Bomb.png" />
+    <Content Include="NewIconSets\InventoryMenu\Bombos_Medallion.png" />
+    <Content Include="NewIconSets\InventoryMenu\Book_of_Mudora.png" />
+    <Content Include="NewIconSets\InventoryMenu\Bottle.png" />
+    <Content Include="NewIconSets\InventoryMenu\Bottle_%28Bee%29.png" />
+    <Content Include="NewIconSets\InventoryMenu\Bottle_%28Blue_Potion%29.png" />
+    <Content Include="NewIconSets\InventoryMenu\Bottle_%28Fairy%29.png" />
+    <Content Include="NewIconSets\InventoryMenu\Bottle_%28Green_Potion%29.png" />
+    <Content Include="NewIconSets\InventoryMenu\Bottle_%28Red_Potion%29.png" />
+    <Content Include="NewIconSets\InventoryMenu\Bottle_1.png" />
+    <Content Include="NewIconSets\InventoryMenu\Bottle_2.png" />
+    <Content Include="NewIconSets\InventoryMenu\Bottle_3.png" />
+    <Content Include="NewIconSets\InventoryMenu\Bottle_4.png" />
+    <Content Include="NewIconSets\InventoryMenu\Bow.png" />
+    <Content Include="NewIconSets\InventoryMenu\Bow_and_Arrows.png" />
+    <Content Include="NewIconSets\InventoryMenu\Bow_and_Silver_Arrows.png" />
+    <Content Include="NewIconSets\InventoryMenu\Cane_of_Byrna.png" />
+    <Content Include="NewIconSets\InventoryMenu\Cane_of_Somaria.png" />
+    <Content Include="NewIconSets\InventoryMenu\Crystal_1.png" />
+    <Content Include="NewIconSets\InventoryMenu\Crystal_2.png" />
+    <Content Include="NewIconSets\InventoryMenu\Crystal_3.png" />
+    <Content Include="NewIconSets\InventoryMenu\Crystal_4.png" />
+    <Content Include="NewIconSets\InventoryMenu\Crystal_5.png" />
+    <Content Include="NewIconSets\InventoryMenu\Crystal_6.png" />
+    <Content Include="NewIconSets\InventoryMenu\Crystal_7.png" />
+    <Content Include="NewIconSets\InventoryMenu\Ether_Medallion.png" />
+    <Content Include="NewIconSets\InventoryMenu\Fighter%27s_Shield.png" />
+    <Content Include="NewIconSets\InventoryMenu\Fighter%27s_Sword.png" />
+    <Content Include="NewIconSets\InventoryMenu\Fire_Rod.png" />
+    <Content Include="NewIconSets\InventoryMenu\Fire_Shield.png" />
+    <Content Include="NewIconSets\InventoryMenu\Flute.png" />
+    <Content Include="NewIconSets\InventoryMenu\Go.png" />
+    <Content Include="NewIconSets\InventoryMenu\Golden_Sword.png" />
+    <Content Include="NewIconSets\InventoryMenu\Green_Tunic.png" />
+    <Content Include="NewIconSets\InventoryMenu\Half_Magic.png" />
+    <Content Include="NewIconSets\InventoryMenu\Hammer.png" />
+    <Content Include="NewIconSets\InventoryMenu\Heart_Container.png" />
+    <Content Include="NewIconSets\InventoryMenu\Hookshot.png" />
+    <Content Include="NewIconSets\InventoryMenu\Ice_Rod.png" />
+    <Content Include="NewIconSets\InventoryMenu\Lamp.png" />
+    <Content Include="NewIconSets\InventoryMenu\Magic_Cape.png" />
+    <Content Include="NewIconSets\InventoryMenu\Magic_Mirror.png" />
+    <Content Include="NewIconSets\InventoryMenu\Magic_Powder.png" />
+    <Content Include="NewIconSets\InventoryMenu\Master_Sword.png" />
+    <Content Include="NewIconSets\InventoryMenu\Mirror_Shield.png" />
+    <Content Include="NewIconSets\InventoryMenu\Moon_Pearl.png" />
+    <Content Include="NewIconSets\InventoryMenu\Mushroom.png" />
+    <Content Include="NewIconSets\InventoryMenu\Mushroom_%28Turned_In%29.png" />
+    <Content Include="NewIconSets\InventoryMenu\Net.png" />
+    <Content Include="NewIconSets\InventoryMenu\Pegasus_Boots.png" />
+    <Content Include="NewIconSets\InventoryMenu\Pendant_of_Courage.png" />
+    <Content Include="NewIconSets\InventoryMenu\Pendant_of_Power.png" />
+    <Content Include="NewIconSets\InventoryMenu\Pendant_of_Wisdom.png" />
+    <Content Include="NewIconSets\InventoryMenu\Pieces_of_Heart_%281%29.png" />
+    <Content Include="NewIconSets\InventoryMenu\Pieces_of_Heart_%280%29.png" />
+    <Content Include="NewIconSets\InventoryMenu\Pieces_of_Heart_%282%29.png" />
+    <Content Include="NewIconSets\InventoryMenu\Pieces_of_Heart_%283%29.png" />
+    <Content Include="NewIconSets\InventoryMenu\Power_Gloves.png" />
+    <Content Include="NewIconSets\InventoryMenu\Quake_Medallion.png" />
+    <Content Include="NewIconSets\InventoryMenu\Quarter_Magic.png" />
+    <Content Include="NewIconSets\InventoryMenu\Red_Boomerang.png" />
+    <Content Include="NewIconSets\InventoryMenu\Red_Tunic.png" />
+    <Content Include="NewIconSets\InventoryMenu\Shovel+Flute.png" />
+    <Content Include="NewIconSets\InventoryMenu\Shovel+Flute_%28Flute_Inactive%29.png" />
+    <Content Include="NewIconSets\InventoryMenu\Shovel+Flute_%28Shovel_Inactive%29.png" />
+    <Content Include="NewIconSets\InventoryMenu\Shovel.png" />
+    <Content Include="NewIconSets\InventoryMenu\Shovel_%28Turned_In%29.png" />
+    <Content Include="NewIconSets\InventoryMenu\Stop.png" />
+    <Content Include="NewIconSets\InventoryMenu\Tempered_Sword.png" />
+    <Content Include="NewSpriteFonts\Default\Timer_0.png" />
+    <Content Include="NewIconSets\InventoryMenu\Titan%27s_Mitt.png" />
+    <Content Include="NewIconSets\InventoryMenu\Treasure_Chest.png" />
+    <Content Include="NewIconSets\InventoryMenu\Treasure_Chest_%28Opened%29.png" />
+    <Content Include="NewIconSets\InventoryMenu\Zora%27s_Flippers.png" />
+    <Content Include="NewSpriteFonts\Default\count.png" />
+    <Content Include="NewSpriteFonts\Default\timer.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

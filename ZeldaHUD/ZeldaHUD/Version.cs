@@ -11,17 +11,26 @@ namespace zeldaGui
 
         public static bool CheckUpdate()
         {
-            string CurrentVersion = "3.0";
-            string checkVersion = "";
-            using (WebClient wc = new WebClient())
-            {
-                checkVersion = wc.DownloadString("https://zarby89.github.io/ZeldaHud/version.txt");
-            }
-            if (!checkVersion.Contains(CurrentVersion))
-            {
-                return true;
-            }
-            return false;
+			bool result = false;
+			try
+			{
+				WebClient web = new WebClient();
+				//web.
+				throw new NotImplementedException();
+			}
+			catch { result = false; }
+			return result;
+            //string CurrentVersion = "3.0";
+            //string checkVersion = "";
+            //using (WebClient wc = new WebClient())
+            //{
+            //    checkVersion = wc.DownloadString("https://github.com/Formedras/ZeldaHud/version.txt");
+            //}
+            //if (!checkVersion.Contains(CurrentVersion))
+            //{
+            //    return true;
+            //}
+            //return false;
         }
 
     }

@@ -33,11 +33,11 @@ namespace zeldaGui
 
         private void ItemSelectorForm_Load(object sender, EventArgs e)
         {
-            imageList1.Images.AddRange(Form1.iconSet);
+            imageList1.Images.AddRange(ZeldaHUD.iconSet);
             listView1.LargeImageList = imageList1;
-            for (int i = 0; i < Form1.itemsList.Count; i++)
+            for (int i = 0; i < ZeldaHUD.itemsList.Count; i++)
             {
-                listView1.Items.Add(Form1.itemsList[i].name, Form1.itemsList[i].iconsId[0]);
+                listView1.Items.Add(ZeldaHUD.itemsList[i].name, ZeldaHUD.itemsList[i].iconsId[0]);
             }
         }
 
