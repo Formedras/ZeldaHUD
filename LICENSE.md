@@ -1,6 +1,7 @@
 MIT License
 
-Copyright (c) 2016, 2017 Zarby89
+Original Software Copyright (c) 2016, 2017 Zarby89
+
 Copyright (c) 2018 Formedras
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
